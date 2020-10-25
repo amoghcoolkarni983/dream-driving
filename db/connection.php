@@ -1,7 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "id15216675_newsiddhikadriving";
-$password = "^pzxOWV(aF!OpEop#P5Z";
+
+function OpenCon(){
+$servername = "a535633a17cc";
+$username = "root@localhost";
+$password = "root";
 $database = "id15216675_driving";
 
 try {
@@ -12,4 +14,11 @@ try {
     } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
     }
+    return $conn;
+  }
+
+  function CloseCon($conn)
+ {
+ $conn -> close();
+ }
 ?>
